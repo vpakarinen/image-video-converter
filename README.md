@@ -71,7 +71,7 @@ Ensure that the `input` and `output` directories exist in the project's root dir
 
 It's essential to run the application first before adding files to the `input` folder to ensure real-time detection.
 
-**Note:** Running the application without any command-line arguments will use the default settings specified in `config/config.yaml`.
+**Note:** Running the application without any arguments will use the default settings specified in `config/config.yaml`.
 
 ### 3. **Add Files for Conversion**
 
