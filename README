@@ -2,14 +2,14 @@
 
 ## Overview
 
-This Python application automates the conversion of image and video files. Users can add their files to a designated folder and specify the target extension. The application processes the files and converts them accordingly. This project is open-source and hosted on GitHub.
+This Python application automates the conversion of image and video files.
 
 ## Features
 
 - **Automatic Directory Monitoring:** Watches a specific folder for new image or video files.
 - **Support for Multiple Formats:** 
-  - Images: JPEG, PNG, BMP
-  - Videos: MP4, AVI, MKV
+  - Images: JPG, PNG, BMP, WEBP, RAW
+  - Videos: MP4, AVI, MKV, MOV, WebM
 - **Command-Line Interface (CLI):** Allows users to specify input/output directories and target formats.
 - **Extensible Architecture:** Easily add support for additional formats in the future.
 - **Robust Logging:** Tracks conversion processes and errors.
@@ -18,9 +18,9 @@ This Python application automates the conversion of image and video files. Users
 
 - **Programming Language:** Python 3.x
 - **Image Processing:** [Pillow](https://python-pillow.org/)
-- **Video Processing:** [FFmpeg](https://ffmpeg.org/) via [ffmpeg-python](https://github.com/kkroening/ffmpeg-python)
-- **Directory Monitoring:** [watchdog](https://python-watchdog.readthedocs.io/)
-- **CLI Parsing:** [argparse](https://docs.python.org/3/library/argparse.html)
+- **Video Processing:** [FFmpeg](https://ffmpeg.org/)
+- **Directory Monitoring:** [Watchdog](https://python-watchdog.readthedocs.io/)
+- **CLI Parsing:** [Argparse](https://docs.python.org/3/library/argparse.html)
 - **Configuration Management:** [PyYAML](https://pyyaml.org/)
 - **Logging:** Python’s built-in `logging` module
 - **Packaging:** [setuptools](https://setuptools.pypa.io/) for distribution
@@ -47,9 +47,3 @@ This Python application automates the conversion of image and video files. Users
    ```bash
    pip install -r requirements.txt
    ```
-
-## Usage
-
-### Command-Line Interface
-
-Run the application using the CLI:
