@@ -1,0 +1,5 @@
+ffmpeg-python 
+watchdog
+moviepy
+Pillow
+PyYAML
