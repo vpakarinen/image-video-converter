@@ -2,4 +2,20 @@ input_dir: ./input
 output_dir: ./output
 default_image_format: png
 default_video_format: mp4
-log_level: INFO 
+log_level: INFO
+
+# Supported Formats
+supported_image_formats:
+  - jpg
+  - jpeg
+  - png
+  - bmp
+  - webp
+  - raw
+
+supported_video_formats:
+  - mp4
+  - avi
+  - mkv
+  - mov
+  - webm 
