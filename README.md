@@ -8,9 +8,24 @@ Python application to automate the conversion of image and video files.
 - **Automatic Directory Monitoring:** Watches a specific folder for new image or video files.
 - **Extensible Architecture:** Easily add support for additional formats in the future.
 - **Robust Logging:** Tracks conversion processes and errors.
-- **Support for Multiple Formats:** 
-  - Images: JPG, PNG, BMP, WEBP, RAW
-  - Videos: MP4, AVI, MKV, MOV, WebM
+
+## Supported Formats
+
+### Image Formats
+
+- **JPG/JPEG**
+- **PNG**
+- **BMP**
+- **WEBP**
+- **RAW**
+
+### Video Formats
+
+- **MP4**
+- **AVI**
+- **MKV**
+- **MOV**
+- **WebM**
 
 ## Technology Stack
 
