@@ -1,0 +1,5 @@
+input_dir: ./input
+output_dir: ./output
+default_image_format: png
+default_video_format: mp4
+log_level: INFO 
