@@ -1,29 +1,27 @@
-# Image and Video Conversion Automation
-
 ## Overview
 
-This Python application automates the conversion of image and video files.
+Python application to automate the conversion of image and video files.
 
 ## Features
 
+- **Command-Line Interface (CLI):** Allows users to specify input/output directories and target formats.
 - **Automatic Directory Monitoring:** Watches a specific folder for new image or video files.
+- **Extensible Architecture:** Easily add support for additional formats in the future.
+- **Robust Logging:** Tracks conversion processes and errors.
 - **Support for Multiple Formats:** 
   - Images: JPG, PNG, BMP, WEBP, RAW
   - Videos: MP4, AVI, MKV, MOV, WebM
-- **Command-Line Interface (CLI):** Allows users to specify input/output directories and target formats.
-- **Extensible Architecture:** Easily add support for additional formats in the future.
-- **Robust Logging:** Tracks conversion processes and errors.
 
 ## Technology Stack
 
-- **Programming Language:** Python 3.x
-- **Image Processing:** [Pillow](https://python-pillow.org/)
-- **Video Processing:** [FFmpeg](https://ffmpeg.org/)
-- **Directory Monitoring:** [Watchdog](https://python-watchdog.readthedocs.io/)
-- **CLI Parsing:** [Argparse](https://docs.python.org/3/library/argparse.html)
-- **Configuration Management:** [PyYAML](https://pyyaml.org/)
 - **Logging:** Python’s built-in `logging` module
 - **Packaging:** [setuptools](https://setuptools.pypa.io/) for distribution
+- **Configuration Management:** [PyYAML](https://pyyaml.org/)
+- **Programming Language:** Python 3.x
+- **Directory Monitoring:** [Watchdog](https://python-watchdog.readthedocs.io/)
+- **Video Processing:** [FFmpeg](https://ffmpeg.org/)
+- **Image Processing:** [Pillow](https://python-pillow.org/)
+- **CLI Parsing:** [Argparse](https://docs.python.org/3/library/argparse.html)
 - **Version Control:** Git
 
 ## Installation
