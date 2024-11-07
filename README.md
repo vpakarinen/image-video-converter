@@ -60,3 +60,19 @@ Python application to automate the conversion of image and video files.
    ```bash
    pip install -r requirements.txt
    ```
+
+## Usage
+
+### 1. **Setup Folders**
+
+Ensure that the `input` and `output` directories exist in the project's root directory.
+
+### 2. **Run the Application**
+
+It's essential to run the application first before adding files to the `input` folder to ensure real-time detection and conversion.
+
+**Note:** Running the application without any command-line arguments will use the default settings specified in `config/config.yaml`.
+
+### 3. **Add Files for Conversion**
+
+With the application running, add your image or video files to the `input` directory. The application will automatically detect and convert them.
