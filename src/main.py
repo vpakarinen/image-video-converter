@@ -1,10 +1,12 @@
-from watchdog.events import FileSystemEventHandler
-from watchdog.observers import Observer
-from converter import Converter
-from config import Config
 import argparse
 import logging
+from logging.handlers import RotatingFileHandler
 import time
+from config import Config
+from converter import Converter
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import os
 
 class FileEventHandler(FileSystemEventHandler):
     def __init__(self, converter, target_image_format, target_video_format):
@@ -15,8 +17,15 @@ class FileEventHandler(FileSystemEventHandler):
 
     def on_created(self, event):
         if event.is_directory:
+            logging.info(f"Ignored directory creation: {event.src_path}")
             return
         file_path = event.src_path
+
+        # Ignore hidden files
+        if os.path.basename(file_path).startswith('.'):
+            logging.info(f"Ignored hidden file: {file_path}")
+            return
+
         logging.info(f"Detected new file: {file_path}")
         if self.converter.is_image(file_path):
             self.converter.convert_image(file_path, self.target_image_format)
@@ -34,11 +43,20 @@ def parse_arguments():
     parser.add_argument('--log_level', type=str, help='Logging level (e.g., DEBUG, INFO)')
     return parser.parse_args()
 
-def setup_logging(log_level):
-    numeric_level = getattr(logging, log_level.upper(), None)
-    if not isinstance(numeric_level, int):
-        numeric_level = logging.INFO
-    logging.basicConfig(level=numeric_level, format='%(asctime)s - %(levelname)s - %(message)s')
+def setup_logging(log_level, log_file='logs/app.log'):
+    logger = logging.getLogger()
+    logger.setLevel(getattr(logging, log_level.upper(), logging.INFO))
+
+    # Rotating File Handler
+    handler = RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=5)
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+
+    # Console Handler
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
 
 def main():
     args = parse_arguments()
@@ -58,12 +76,13 @@ def main():
     logging.info(f'Default Image Format: {image_format}')
     logging.info(f'Default Video Format: {video_format}')
 
-    # Retrieve supported formats
-    supported_image_formats = config.get_supported_image_formats()
-    supported_video_formats = config.get_supported_video_formats()
-
-    logging.info(f'Supported Image Formats: {", ".join(supported_image_formats)}')
-    logging.info(f'Supported Video Formats: {", ".join(supported_video_formats)}')
+    # Verify that input and output directories exist
+    if not os.path.isdir(input_dir):
+        logging.error(f"Input directory does not exist: {input_dir}")
+        return
+    if not os.path.isdir(output_dir):
+        logging.error(f"Output directory does not exist: {output_dir}")
+        return
 
     # Initialize Converter
     converter = Converter(config)
@@ -88,4 +107,4 @@ def main():
     observer.join()
 
 if __name__ == '__main__':
-    main() 
+    main()
