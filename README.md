@@ -75,4 +75,4 @@ It's essential to run the application first before adding files to the `input` f
 
 ### 3. **Add Files for Conversion**
 
-With the application running, add your image or video files to the `input` directory. The application will automatically detect and convert them.
+With the application running, add your image or video files to the `input` directory.
