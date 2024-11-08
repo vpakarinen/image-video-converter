@@ -1,6 +1,6 @@
 ## Overview
 
-Python application to automate the conversion of image and video files.
+Python application to automate the image and video conversion.
 
 ## Features
 
