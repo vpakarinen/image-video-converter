@@ -1,6 +1,6 @@
-input_dir: ./input
-output_dir: ./output
-default_image_format: png
+input_dir: C:/Users/username/path/to/input/folder
+output_dir: C:/Users/username/path/to/output/folder
+default_image_format: jpg
 default_video_format: mp4
 log_level: INFO
 
@@ -18,4 +18,4 @@ supported_video_formats:
   - avi
   - mkv
   - mov
-  - webm 
+  - webm
