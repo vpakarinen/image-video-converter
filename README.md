@@ -29,12 +29,12 @@ Python application to automate the conversion of image and video files.
 
 ## Technology Stack
 
-- **Logging:** Python’s built-in `logging` module
+- **Logging:** Python's built-in `logging` module
 - **Packaging:** [setuptools](https://setuptools.pypa.io/) for distribution
 - **Configuration Management:** [PyYAML](https://pyyaml.org/)
 - **Programming Language:** Python 3.x
 - **Directory Monitoring:** [Watchdog](https://python-watchdog.readthedocs.io/)
-- **Video Processing:** [FFmpeg](https://ffmpeg.org/)
+- **Video Processing:** [MoviePy](https://zulko.github.io/moviepy/)
 - **Image Processing:** [Pillow](https://python-pillow.org/)
 - **CLI Parsing:** [Argparse](https://docs.python.org/3/library/argparse.html)
 - **Version Control:** Git
