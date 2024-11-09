@@ -44,6 +44,7 @@ def parse_arguments():
     return parser.parse_args()
 
 def setup_logging(log_level, log_file='logs/app.log'):
+    os.makedirs('logs', exist_ok=True)
     logger = logging.getLogger()
     logger.setLevel(getattr(logging, log_level.upper(), logging.INFO))
 
