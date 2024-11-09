@@ -1,11 +1,11 @@
+from watchdog.events import FileSystemEventHandler
+from logging.handlers import RotatingFileHandler
+from watchdog.observers import Observer
+from converter import Converter
+from config import Config
 import argparse
 import logging
-from logging.handlers import RotatingFileHandler
 import time
-from config import Config
-from converter import Converter
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
 import os
 
 class FileEventHandler(FileSystemEventHandler):
