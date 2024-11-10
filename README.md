@@ -3,7 +3,7 @@
 Python application to automate the image and video conversion.
 
 ## Features
-
+- **Configuration Management:** Easy-to-edit `config.yaml` configuration file to adjust settings without modifying the code.
 - **Command-Line Interface (CLI):** Allows users to specify input/output directories and target formats.
 - **Automatic Directory Monitoring:** Watches a specific folder for new image or video files.
 - **Extensible Architecture:** Easily add support for additional formats in the future.
@@ -42,11 +42,11 @@ Python application to automate the image and video conversion.
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your_username/image-video-converter.git
+   git clone https://github.com/vpakarinen/image-video-converter.git
    cd image-video-converter
    ```
 
-2. **Create a Virtual Environment**
+2. **Create a Virtual Environment** (Optional but Recommended)
 
    ```bash
    python3 -m venv venv
