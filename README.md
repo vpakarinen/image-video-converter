@@ -3,8 +3,8 @@
 Python application to automate the image and video conversion.
 
 ## Features
-- **Configuration Management:** Easy-to-edit `config.yaml` configuration file to adjust settings without modifying the code.
 - **Command-Line Interface (CLI):** Allows users to specify input/output directories and target formats.
+- **Configuration Management:** Easy-to-edit `config.yaml` configuration file to adjust settings.
 - **Automatic Directory Monitoring:** Watches a specific folder for new image or video files.
 - **Extensible Architecture:** Easily add support for additional formats in the future.
 - **Robust Logging:** Tracks conversion processes and errors.
